@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+<h1> Vue Instance and propery </h1>
+<div id="app">
+	{{ nama }} - {{ umur }}
+</div>
+<div id="app2">
+	{{ nama }} - {{ umur }}
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	// Default
+	// new Vue({
+	// 	el 		: "#app",
+	// 	data 	: {
+	// 		nama : "Ahmad muzakki",
+	// 		umur : 17,
+	// 	}
+	// })
+
+	// 01
+	let data = { nama: "Renaldi", umur: 17 }
+
+	new Vue({
+		el 		: "#app",
+		data 	: data
+	})
+	data = { nama: "ahmad muzakki", umur: 19 }
+	var App2 =  new Vue({
+		el 		: "#app2",
+		data 	: data
+	})
+	
+</script>
+</body>
+</html>
