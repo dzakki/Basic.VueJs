@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+	<div id="app">
+		<template-baru :namas="nama" :umur="umur"></template-baru>
+	</div>
+	<template id="post-template">
+		<h2>ini adalah post template dengan tag template-baru</h2>
+	</template>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	// register and deifne
+	Vue.component('template-baru', {
+		template : '<h1> {{ namas }} {{umur}} </h1>',
+		props	 : ['namas', 'umur']
+	})
+
+	let vo = new Vue({
+		el 		: '#app',
+		data 	: {
+			nama : 'dzakki',
+			umur : 17
+		}
+	})
+
+	// let templateBaru = Vue.extend({
+	// 	template : '<h1> Ini adalah template baru </h1>'
+	// })
+
+	// register 
+	// Vue.component('template-baru', {
+	// 	template : '<h1> Ini adalah template baru </h1>'
+	// })
+
+
+</script>
+</body>
+</html>

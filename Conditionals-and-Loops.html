@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar vue</title>
+</head>
+<body>
+	<div id="app">
+		<span v-if="seen">
+			now you see me, because you is {{ seen }}
+		</span>
+	</div>
+	<div id="app2">
+		<ol>
+			<li v-for= "todo in todos">
+				{{ todo.text }} ~ {{ todo.category }}
+			</li>
+		</ol>
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+	<script type="text/javascript">
+		let App = new 	Vue({
+			el 		: '#app',
+			data 	: {
+				seen : true
+			}
+		})
+		let App2 = new Vue({
+			el 		: '#app2',
+			data 	: {
+				todos : [
+					{ text : 'javascript' , 'category' : 'Frontend' },
+					{ text : 'PHP' , 'category' : 'Backend' },
+					{ text : 'Golang' , 'category' : 'Backend' },
+				]
+			}
+		})
+	</script>
+</body>
+</html>

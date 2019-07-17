@@ -12,6 +12,16 @@
 <div id="app2">
 	{{ nama }} - {{ umur }}
 </div>
+<div id="app3">
+	<span v-if='seen'>now you see me</span>
+</div>
+<div id="app4">
+	<ol>
+		<li  v-for="todo in todos" >
+			{{ todo.text }}
+		</li>
+	</ol>
+</div>
 <script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
 <script type="text/javascript">
 	// Default
@@ -35,7 +45,24 @@
 		el 		: "#app2",
 		data 	: data
 	})
-	
+	console.log(App2.nama = 'Muhammad');
+	let App3 = new Vue({
+		el 		:  "#app3",
+		data 	: {
+			seen : true // false
+		}
+	})
+	let App4 = new Vue({
+		el 		: "#app4",
+		data 	: {
+			todos : [
+				{ text: 'Learn JavaScript' },
+			    { text: 'Learn Vue' },
+			    { text: 'Build something awesome' }
+			]
+		}
+	})
+	console.log(App4.todos[0].text)
 </script>
 </body>
 </html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+<div id="app">
+	{{ message }}
+</div>
+<div id="app2">
+	{{ messages[0].Text +' '+ messages[0].Category }}
+	{{ messages[1].Text }}
+</div>
+<div id="app3">
+	<span v-bind:title ="message">
+		Hover your mouse over me for a few seconds
+	    to see my dynamically bound title!
+	</span>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	new Vue({
+		el 		: '#app',
+		data 	: {
+			message : 'Hello Vue!'
+		}
+	})
+
+	let message = [
+		{ 'Text' : 'Js' , 'Category' : 'Programming'},
+		{ 'Text' : 'PHP' }
+	]
+	let App2 = new Vue({
+		el 		: '#app2',
+		data 	: {
+			messages : message
+		}
+	})
+	let App3 = new Vue({
+		el 		: '#app3',
+		data 	: {
+			message : 'You loaded this page on ' + new Date().toLocaleString()
+		}
+	})
+</script>
+</body>
+</html>

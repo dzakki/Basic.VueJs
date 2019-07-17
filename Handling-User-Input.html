@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+<div id="app">
+	<p> {{ message }} </p>
+	<button v-on:click="reverseMessage">Reverse Message</button>
+</div>
+<br/>
+<div id="app2">
+	<div> {{ color }} </div>
+	<button v-on:click="changeColor">Change background</button>
+</div>
+<div id="app3">
+	<p> {{ message }} </p>
+	<input type="text" v-model='message'>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	let App = new Vue({
+		el 		: '#app',
+		data 	: {
+			message : 'Reverse message'
+		},
+		methods : {
+			reverseMessage : function(){
+				this.message = this.message.split('').reverse().join('')
+			}
+		}
+	})
+	let App2 = new Vue({
+		el 		: '#app2',
+		data 	: {
+			color : 'red'
+		},
+		methods : {
+			changeColor : function(){
+				this.color = 'blue | red'
+			}
+		}
+	})
+	let App3 = new Vue({
+		el 		: '#app3',
+		data 	: {
+			message : 'hello vue'
+		}
+	})
+</script>
+</body>
+</html>

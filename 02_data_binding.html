@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+<h1> Data Binding </h1>
+<div id="app">
+	{{ nama }} - {{ umur }}
+	<br>
+	 <span v-html="raw"></span> 
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	
+	let vm = new Vue({
+		el 		: "#app",
+		data 	: {
+			nama : "Ahmad muzakki",
+			umur : 17,
+			raw  : " <p> Awass.. <b>Batu</b> </p> ",
+		}
+	})
+
+	
+</script>
+</body>
+</html>

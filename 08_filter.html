@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+<div id="app">
+	<ul>
+		<li v-for=" member in members " >
+			{{ member.nama }}
+		</li>
+	</ul>
+</div>
+
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	let vo = new Vue({
+		el		: '#app',
+		data 	: {
+			members : [
+			{
+				nama 	: 'iqbal',
+				kelas 	: 12,
+				umur 	: 18
+			},
+			{
+				nama 	: 'dzakki',
+				kelas 	: 12,
+				umur 	: 17
+			},
+			{
+				nama 	: 'hilman',
+				kelas 	: 10,
+				umur 	: 16
+			}
+			]
+		}
+	})
+</script>
+</body>
+</html>

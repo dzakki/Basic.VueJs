@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Belajar Vue</title>
+</head>
+<body>
+<div id="app">
+	<span v-if="this.nilai < 90">
+		Nilainya {{ nilai }} jelek
+	</span>
+	<span v-else>
+		nilainya {{ nilai }} bagus
+	</span>
+</div>
+<div id="app2">
+	<span v-show='bolean === true'>
+		hasilnya {{ bolean }} benar
+	</span>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.6.10/dist/vue.js"></script>
+<script type="text/javascript">
+	let vo = new Vue({
+		el 		: '#app',
+		data 	: {
+			nilai : 100,
+		}
+	})
+	let vo2 = new Vue({
+		el 		: '#app2',
+		data 	: {
+			bolean : true
+		}
+	})
+</script>
+</body>
+</html>
